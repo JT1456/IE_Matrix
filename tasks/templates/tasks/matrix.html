@@ -3,12 +3,40 @@
     <head>
         <title>Task Matrix</title>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .graph {
+                width: 60%;
+            }
+
+            .form-container {
+                width: 35%;
+                padding-left: 20px;
+            }
+        </style>
     </head>
 
     <body>
-        <h1>Tast Impact v Effort Matrix</h1>
-        <div id="task-matrix">
-            {{graph|safe}}
+        <h1>Task Impact vs Effort Matrix</h1>
+        <div class="container">
+            <!-- Task Matrix Section -->
+            <div class="graph" id="task-matrix">
+                {{ graph|safe }}
+            </div>
+
+            <!-- Task Form Section -->
+            <div class="form-container">
+                <h2>Add a Task</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
         </div>
 
         <script>
