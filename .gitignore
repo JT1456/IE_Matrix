@@ -1,0 +1,53 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+/media
+/static
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE and Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+
+# Miscellaneous
+*.coverage
+*.tox
+*.nox
+*.coverage
+*.hypothesis/
+*.pytest_cache/
+*.cover
+*.idea/
+*.vscode/
+*.mypy_cache/
+*.nox/
+*.tox/
+*.coverage
+*.hypothesis/
+*.pytest_cache/
+*.cover
+*.env
+*.venv
