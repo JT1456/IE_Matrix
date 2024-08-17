@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task Matrix</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+
+    <body>
+        <h1>Tast Impact v Effort Matrix</h1>
+        <div id="task-matrix">
+            {{graph|safe}}
+        </div>
+
+        <script>
+            var taskMatrix = document.getElementById('task-matrix');
+            taskMatrix.on('plotly_click', function(data) {
+                var point = data.point[0];
+                var url = data.customdata[0];
+                window.location.href = url;
+            });
+        </script>
+    </body>
+</html>
